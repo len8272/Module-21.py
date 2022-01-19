@@ -1,0 +1,102 @@
+2022-01-11 19:59:01.615574 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:01.615574 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:03.109586 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:03.117570 test_get_all_pets_with_valid_key ->
+2022-01-11 19:59:03.118571 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 19:59:05.812159 get_list_of_pets : status 200, body {'pets': [{'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 19:59:05.824158 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:05.824158 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:07.289210 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:07.299204 test_add_new_pet_with_valid_data ->
+2022-01-11 19:59:07.299204 add_new_pet (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, formData : name='Барбоскин', animal_type='двортерьер', age='4', pet_photo='D:\\Документы\\SkillFactory\\PyCharm\\test_petfriends\\tests\\images/cat1.jpg')
+2022-01-11 19:59:10.241255 add_new_pet : status 200, body {'_id': '', 'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920349.1841257', 'id': 'c2ef59ce-0158-4f49-963a-06bf84b7921f', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:10.277276 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:10.277276 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:11.692649 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:11.708650 test_successful_delete_self_pet ->
+2022-01-11 19:59:11.708650 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 19:59:14.476390 get_list_of_pets : status 200, body {'pets': [{'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920349.1841257', 'id': 'c2ef59ce-0158-4f49-963a-06bf84b7921f', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 19:59:14.485409 delete_pet (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, path : pet_id='c2ef59ce-0158-4f49-963a-06bf84b7921f')
+2022-01-11 19:59:17.011097 delete_pet : status 200, body 
+2022-01-11 19:59:17.031084 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 19:59:19.718100 get_list_of_pets : status 200, body {'pets': [{'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 19:59:19.749081 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:19.749081 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:21.151741 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:21.181783 test_add_new_pet_without_photo_with_valid_data ->
+2022-01-11 19:59:21.181783 add_new_pet_without_photo (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, formData : name='Барбоскин', animal_type='двортерьер', age='4')
+2022-01-11 19:59:23.683768 add_new_pet_without_photo : status 200, body {'_id': '', 'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:23.714716 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:23.714716 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:25.251181 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:25.278103 test_add_photo_of_pet_with_valid_data ->
+2022-01-11 19:59:25.278103 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 19:59:28.046359 get_list_of_pets : status 200, body {'pets': [{'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 19:59:28.065380 add_photo_of_pet (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, path : pet_id='bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', formData : pet_photo='D:\\Документы\\SkillFactory\\PyCharm\\test_petfriends\\tests\\images/cat1.jpg')
+2022-01-11 19:59:31.188846 add_photo_of_pet : status 200, body {'_id': '', 'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:31.203850 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:31.203850 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:32.809917 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:32.824894 test_get_api_key_for_invalid_email ->
+2022-01-11 19:59:32.824894 get_api_key (PetFriends, header : email='invalid_email', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:34.322202 get_api_key : status 403, body <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>403 Forbidden</title>
+<h1>Forbidden</h1>
+<p>This user wasn't found in database</p>
+
+2022-01-11 19:59:34.344199 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:34.344199 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:35.852758 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:35.867757 test_get_api_key_for_empty_password ->
+2022-01-11 19:59:35.868759 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='')
+2022-01-11 19:59:37.442220 get_api_key : status 403, body <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>403 Forbidden</title>
+<h1>Forbidden</h1>
+<p>This user wasn't found in database</p>
+
+2022-01-11 19:59:37.469191 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:37.469191 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:38.931596 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:38.964602 test_get_all_pets_with_invalid_key ->
+2022-01-11 19:59:38.964602 get_list_of_pets (PetFriends, header : auth_key={'key': 'key'}, query : filter='')
+2022-01-11 19:59:40.441253 get_list_of_pets : status 403, body <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>403 Forbidden</title>
+<h1>Forbidden</h1>
+<p>Please provide 'auth_key' Header</p>
+
+2022-01-11 19:59:40.476247 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:40.476247 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:41.980555 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:42.009094 test_add_new_pet_with_empty_name ->
+2022-01-11 19:59:42.009094 add_new_pet_without_photo (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, formData : name='', animal_type='двортерьер', age='4')
+2022-01-11 19:59:44.846001 add_new_pet_without_photo : status 200, body {'_id': '', 'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920383.9974763', 'id': '27de0478-3f1c-4293-98f8-a91c9ce6ed0c', 'name': '', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:44.884989 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:44.884989 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:46.358520 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:46.375536 test_add_new_pet_with_unlimited_name ->
+2022-01-11 19:59:46.375536 add_new_pet_without_photo (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, formData : name='БарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскин', animal_type='двортерьер', age='4')
+2022-01-11 19:59:48.894448 add_new_pet_without_photo : status 200, body {'_id': '', 'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'БарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскин', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:48.958452 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:48.958452 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:50.400814 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:50.412830 test_successful_update_self_pet_info ->
+2022-01-11 19:59:50.412830 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 19:59:53.169283 get_list_of_pets : status 200, body {'pets': [{'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'БарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскинБарбоскин', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920383.9974763', 'id': '27de0478-3f1c-4293-98f8-a91c9ce6ed0c', 'name': '', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 19:59:53.178286 update_pet_info (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, path : pet_id='e9d825cb-c251-46e9-b9ab-c8cc2a870bac', formData : name='Мурзик', animal_type='Котэ', age=5)
+2022-01-11 19:59:55.906723 update_pet_info : status 200, body {'age': '5', 'animal_type': 'Котэ', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'Мурзик', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:55.942481 test_get_api_key_for_valid_user ->
+2022-01-11 19:59:55.942481 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 19:59:57.391330 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 19:59:57.400316 test_update_pet_with_invalid_age ->
+2022-01-11 19:59:57.400316 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 20:00:00.116120 get_list_of_pets : status 200, body {'pets': [{'age': '5', 'animal_type': 'Котэ', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'Мурзик', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920383.9974763', 'id': '27de0478-3f1c-4293-98f8-a91c9ce6ed0c', 'name': '', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 20:00:00.124969 update_pet_info (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, path : pet_id='e9d825cb-c251-46e9-b9ab-c8cc2a870bac', formData : name='Барбоскин', animal_type='двортерьер', age='age')
+2022-01-11 20:00:02.762089 update_pet_info : status 200, body {'age': 'age', 'animal_type': 'двортерьер', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'Барбоскин', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 20:00:02.817589 test_get_api_key_for_valid_user ->
+2022-01-11 20:00:02.817589 get_api_key (PetFriends, header : email='ghost19751975@mail.ru', password='myHEROKUAPPpass_1975')
+2022-01-11 20:00:04.392303 get_api_key : status 200, body {'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
+2022-01-11 20:00:04.403299 test_update_pet_with_negative_age ->
+2022-01-11 20:00:04.403299 get_list_of_pets (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, query : filter='my_pets')
+2022-01-11 20:00:07.126730 get_list_of_pets : status 200, body {'pets': [{'age': 'age', 'animal_type': 'двортерьер', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'Барбоскин', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920383.9974763', 'id': '27de0478-3f1c-4293-98f8-a91c9ce6ed0c', 'name': '', 'pet_photo': ''}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641920362.8538086', 'id': 'bb2b2729-c53e-46ed-9c53-a3a1d8a8cdf6', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}, {'age': '4', 'animal_type': 'двортерьер', 'created_at': '1641916015.0056329', 'id': '9e47c7f6-403d-443e-bd76-102075dc3b08', 'name': 'Барбоскин', 'pet_photo': 'data:image/jpeg;base64,/9j/4AA ...'}]}
+2022-01-11 20:00:07.149752 update_pet_info (PetFriends, header : auth_key={'key': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}, path : pet_id='e9d825cb-c251-46e9-b9ab-c8cc2a870bac', formData : name='Барбоскин', animal_type='двортерьер', age=-3)
+2022-01-11 20:00:09.754537 update_pet_info : status 200, body {'age': '-3', 'animal_type': 'двортерьер', 'created_at': '1641920388.0534263', 'id': 'e9d825cb-c251-46e9-b9ab-c8cc2a870bac', 'name': 'Барбоскин', 'pet_photo': '', 'user_id': '82485c033e40c0fc3fb16890ba511d6a554ff43899a675651d889d04'}
